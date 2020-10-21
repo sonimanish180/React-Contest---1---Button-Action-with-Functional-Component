@@ -14,12 +14,11 @@ function App() {
     <div id="main">
       {/* Do not alter the main div */}
 
-      <p id={"para"}>
-        <button onClick={renderPara()} id={"click"}>
-          Button
-        </button>
-        {paragraph}
-      </p>
+      <p id={"para"}>{paragraph}</p>
+
+      <button onClick={renderPara()} id={"click"}>
+        Button
+      </button>
     </div>
   );
 }
