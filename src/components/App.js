@@ -1,24 +1,25 @@
 import React, { Component, useState } from "react";
 import "./../styles/App.css";
+import Text from "./Text";
 
 function App() {
-  let [paragraph, setParagraph] = React.useState("");
+  const [text, setText] = React.useState("");
 
-  let renderPara = function () {
-    setParagraph(
-      "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
-    );
+  const textData =
+    "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy";
+
+  const clickFn = () => {
+    setText(textData);
   };
 
   return (
-    <div id="main">
-      {/* Do not alter the main div */}
-      <button onClick={renderPara()} id="click">
-        Button
+    <>
+      <div id="main">{/* // Do not alter the main div */}</div>
+      <button id="click" onClick={clickFn}>
+        CLICK
       </button>
-
-      <p id="para">{paragraph}</p>
-    </div>
+      <Text text={text} />
+    </>
   );
 }
 
