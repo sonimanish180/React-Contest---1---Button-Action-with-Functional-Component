@@ -14,9 +14,9 @@ function App() {
     <div id="main">
       {/* Do not alter the main div */}
 
-      <p id={"para"}>{paragraph}</p>
+      <p id="para">{paragraph}</p>
 
-      <button onClick={renderPara()} id={"click"}>
+      <button onClick={renderPara()} id="click">
         Button
       </button>
     </div>
