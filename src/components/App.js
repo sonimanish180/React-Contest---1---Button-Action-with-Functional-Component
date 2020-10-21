@@ -13,12 +13,11 @@ function App() {
   return (
     <div id="main">
       {/* Do not alter the main div */}
-
-      <p id="para">{paragraph}</p>
-
       <button onClick={renderPara()} id="click">
         Button
       </button>
+
+      <p id="para">{paragraph}</p>
     </div>
   );
 }
