@@ -2,12 +2,10 @@ import React, { Component, useState } from "react";
 import "./../styles/App.css";
 
 function App() {
-  let [paragraph, setParagraph] = React.useState("");
+  let [paragraph, setParagraph] = React.useState(false);
 
   let renderPara = () => {
-    setParagraph(
-      "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
-    );
+    setParagraph(true);
   };
 
   return (
@@ -17,8 +15,12 @@ function App() {
         <button onClick={() => renderPara()} id="click">
           CLICK
         </button>
-
-        <p id="para">{paragraph}</p>
+        {paragraph && (
+          <p id="para">
+            "Hello, I've learnt to use the full-stack evaluation tool. This
+            makes me so happy"
+          </p>
+        )}
       </div>
     </>
   );
