@@ -4,7 +4,7 @@ import "./../styles/App.css";
 function App() {
   let [paragraph, setParagraph] = React.useState("");
 
-  let renderPara = function () {
+  let renderPara = () => {
     setParagraph(
       "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
     );
@@ -14,7 +14,7 @@ function App() {
     <>
       <div id="main">
         {/* Do not alter the main div */}
-        <button onClick={renderPara()} id="click">
+        <button onClick={() => renderPara()} id="click">
           CLICK
         </button>
 
